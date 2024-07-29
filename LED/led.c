@@ -2,8 +2,8 @@
  * @file led.c
  * @brief LED initialization function.
  * @author Yixiang Fan
- *
- * @copyright Copyright (c) 2022 Yixiang Fan. All rights reserved.
+ * @date 2022-05-24
+ * @copyright Copyright 2022 Yixiang Fan. All rights reserved.
  *
  * This file contains the implementation of the LED initialization function.
  */

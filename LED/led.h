@@ -1,10 +1,20 @@
-#ifndef _led_H
-#define _led_H
+/**
+ * @file led.h
+ * @brief LED initialization function.
+ * @author Yixiang Fan
+ * @date 2022-05-24
+ * @copyright Copyright 2022 Yixiang Fan. All rights reserved.
+ *
+ * This file contains the implementation of the LED initialization function.
+ */
+
+#ifndef LED_LED_H_
+#define LED_LED_H_
 
 /*  defind RCC and pin of LED */
-#define LED_PORT 			GPIOC
-#define LED_PIN 			(GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_2|GPIO_Pin_3|GPIO_Pin_4|GPIO_Pin_5|GPIO_Pin_6|GPIO_Pin_7)
-#define LED_PORT_RCC		RCC_APB2Periph_GPIOC
+#define LED_PORT GPIOC
+#define LED_PIN (GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_2|GPIO_Pin_3|GPIO_Pin_4|GPIO_Pin_5|GPIO_Pin_6|GPIO_Pin_7)
+#define LED_PORT_RCC RCC_APB2Periph_GPIOC
 
 /**
  * @brief Initializes the LEDs on the STM32F10x board.
@@ -19,4 +29,4 @@
  */
 void LED_Init(void);
 
-#endif
+#endif  // LED_LED_H_
