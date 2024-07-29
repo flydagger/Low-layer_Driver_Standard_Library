@@ -1,4 +1,15 @@
 /**
+ * @file hse.c
+ * @brief Configures the High Speed External (HSE) clock, divides it, and sets the PLL.
+ * @author Yixiang Fan
+ * @date 2024-07-29
+ * @copyright Copyright 2024 Yixiang Fan. All rights reserved.
+ *
+ * This file contains the implementation of the RCC_HSE_Config function, which configures the HSE clock,
+ * divides it, and sets the PLL. It allows the user to customize the system time by modifying the clock.
+ */
+
+/**
  * @brief Configures the High Speed External (HSE) clock, divides it, and sets the PLL.
  *
  * This function allows the user to configure the HSE clock, set the division factor, and PLL multiplier.
