@@ -1,4 +1,14 @@
 /**
+ * @file led.c
+ * @brief LED initialization function.
+ * @author Yixiang Fan
+ *
+ * @copyright Copyright (c) 2022 Yixiang Fan. All rights reserved.
+ *
+ * This file contains the implementation of the LED initialization function.
+ */
+
+/**
  * @brief LED initialization function.
  *
  * This function initializes the LED port and sets it to push-pull output mode.
@@ -7,8 +17,7 @@
  * @param void
  * @return void
  */
-void LED_Init()
-{
+void LED_Init() {
     GPIO_InitTypeDef GPIO_InitStructure;  // Define structure variable
 
     // Enable the clock for the LED port
