@@ -17,15 +17,13 @@
 #define LED_PORT_RCC RCC_APB2Periph_GPIOC
 
 /**
- * @brief Initializes the LEDs on the STM32F10x board.
+ * @brief LED initialization function.
  *
- * This function configures the GPIO pins connected to the LEDs as output pins.
- * The LEDs are connected to the GPIOC port, and the pins used are GPIO_Pin_0 to GPIO_Pin_7.
- * The function also enables the clock for the GPIOC peripheral.
+ * This function initializes the LED port and sets it to push-pull output mode.
+ * The LED is initially turned off by setting the port pin to high.
  *
- * @param None
- *
- * @return None
+ * @param void
+ * @return void
  */
 void LED_Init(void);
 

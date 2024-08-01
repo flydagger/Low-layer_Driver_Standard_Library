@@ -28,26 +28,6 @@ void SysTick_Init(u8 sysclk) {
 }
 
 /**
- * @brief Delays the program execution for a specified number of microseconds.
- *
- * Uses SysTick to delay the program execution for the specified number of microseconds.
- * The maximum delay is limited by the SysTick counter size (24 bits) and the system clock frequency.
- *
- * @param nus Number of microseconds to delay. Maximum value is 798915us (2^24/fac_us@fac_us=21).
- */
-void delay_us(u32 nus) {
-    u32 temp;
-    SysTick->LOAD = nus * fac_us;  // Time to load
-    SysTick->VAL = 0x00;  // Clear the counter
-    SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;  // Start counting
-    do {
-        temp = SysTick->CTRL;
-    } while ((temp & 0x01) && !(temp & (1 << 16)));  // Wait for the count to reach zero
-    SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;  // Stop counting
-    SysTick->VAL = 0X00;  // Clear the counter
-}
-
-/**
  * @brief Delays the program execution for a specified number of milliseconds.
  *
  * Uses SysTick to delay the program execution for the specified number of milliseconds.
@@ -68,3 +48,22 @@ void delay_ms(u16 nms) {
     SysTick->VAL = 0X00;  // Clear the counter
 }
 
+/**
+ * @brief Delays the program execution for a specified number of microseconds.
+ *
+ * Uses SysTick to delay the program execution for the specified number of microseconds.
+ * The maximum delay is limited by the SysTick counter size (24 bits) and the system clock frequency.
+ *
+ * @param nus Number of microseconds to delay. Maximum value is 798915us (2^24/fac_us@fac_us=21).
+ */
+void delay_us(u32 nus) {
+    u32 temp;
+    SysTick->LOAD = nus * fac_us;  // Time to load
+    SysTick->VAL = 0x00;  // Clear the counter
+    SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;  // Start counting
+    do {
+        temp = SysTick->CTRL;
+    } while ((temp & 0x01) && !(temp & (1 << 16)));  // Wait for the count to reach zero
+    SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;  // Stop counting
+    SysTick->VAL = 0X00;  // Clear the counter
+}
