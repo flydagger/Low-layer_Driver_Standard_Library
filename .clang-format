@@ -1,0 +1,9 @@
+# .clang-format
+AllowShortFunctionsOnASingleLine: Empty
+BasedOnStyle: LLVM
+BreakBeforeBraces: Attach
+ColumnLimit: 120
+IndentWidth: 4
+SpacesBeforeTrailingComments: 2
+TabWidth: 4
+UseTab: Never
