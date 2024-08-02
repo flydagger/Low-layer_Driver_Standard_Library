@@ -5,6 +5,7 @@
  * @date 2024-08-01
  * @copyright Copyright 2024 Yixiang Fan. All rights reserved.
  */
+
 #ifndef EXTERNAL_INTERUPT_EXIT_EXTI_H_
 #define EXTERNAL_INTERUPT_EXIT_EXTI_H_
 
