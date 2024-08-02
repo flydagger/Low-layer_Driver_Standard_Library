@@ -13,7 +13,9 @@
 #ifndef USART_USART_H_
 #define USART_USART_H_
 
+#include "stdio.h"
 #include "system.h"
+
 
 void USART1_Init(unit32_t bound);
 

@@ -11,6 +11,28 @@
 
 #include "usart.h"
 
+/**
+ * @brief This function is called by default when using printf function.
+ *        It sends a character to the USART1 and waits until the transmission is complete.
+ *
+ * @param ch The character to be sent.
+ * @param p  Pointer to a FILE object. This parameter is not used in this function.
+ *
+ * @return The character that was sent.
+ *
+ * @note This function is intended to be used with the printf function.
+ *       It assumes that the USART1 has already been initialized and configured.
+ *
+ * @see USART_SendData()
+ * @see USART_GetFlagStatus()
+ */
+int fputc(int ch, FILE *p) {  // This function is called by default when using printf function
+    USART_SendData(USART1, (u8)ch);
+    while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET) {
+    }
+    return ch;
+}
+
 void USART1_Init(u32 bound) {
     // GPIO port settings
     GPIO_InitTypeDef GPIO_InitStructure;
@@ -19,6 +41,7 @@ void USART1_Init(u32 bound) {
 
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
 
     // Configure GPIO mode and IO pins
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;  // TX: Serial output PA9
