@@ -1,6 +1,6 @@
 /**
  * @file touch_key.c
- * @brief This file contains the implementation of a touch key scanning module.
+ * @brief This file contains the implementation of a touch key module.
  * @author Yixiang Fan
  * @date 2024-08-03
  * @copyright Copyright 2024 Yixiang Fan. All rights reserved.
