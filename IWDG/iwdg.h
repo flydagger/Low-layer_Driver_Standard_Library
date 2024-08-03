@@ -1,3 +1,11 @@
+/**
+ * @file iwdg.h
+ * @brief Header file for Independent Watchdog (IWDG) driver.
+ * @author Yixiang Fan
+ * @date 2024-08-03
+ * @copyright Copyright 2024 Yixiang Fan. All rights reserved.
+ */
+
 #ifndef IWDG_IWDG_H_
 #define IWDG_IWDG_H_
 
@@ -15,7 +23,7 @@
  *
  * @return void
  */
-void IWDG_Init(u8 pre, u16 rlr);
+void IWDG_Init(unit8_t pre, uint16_t rlr);
 
 /**
  * @brief Feeds the Independent Watchdog (IWDG).
