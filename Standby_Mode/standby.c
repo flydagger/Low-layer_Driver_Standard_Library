@@ -1,12 +1,12 @@
 /**
- * @file    wkup.c
+ * @file    standby.c
  * @brief   This file contains functions for entering the Standby mode.
  * @author Yixiang Fan
  * @date 2024-08-03
  * @copyright Copyright 2024 Yixiang Fan. All rights reserved.
  */
 
-#include "wkup.h"
+#include "standby.h"
 
 /**
  * @brief  Enters the Standby mode.
