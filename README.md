@@ -1,2 +1,2 @@
-# Board_Support_Package-Low-layer_driver_Standard_library
+# Low-layer_Driver_Standard_Library
 Sample code of low-layer drivers of STM32
